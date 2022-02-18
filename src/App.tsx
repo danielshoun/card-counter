@@ -1,9 +1,12 @@
 import React from 'react';
 import { CountingSystem } from './enums';
-import { createDeck } from './models/card';
+import Deck from './models/deck';
 
 function App() {
-  console.log(createDeck(CountingSystem.HiLo))
+  const deck = new Deck(CountingSystem.HiLo)
+  console.log(deck);
+  console.log(deck.draw());
+  console.log(deck);
 
   return (
     <div className="App">
